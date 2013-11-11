@@ -19,7 +19,7 @@ namespace DevAuth.AspNet
 
         public const string TokenEndpoint = "https://github.com/login/oauth/access_token";
 
-        public const string UsersEndpoint = "https://api.github.com/users";
+        public const string UsersEndpoint = "https://api.github.com/user";
 
         private readonly string _clientID;
 
@@ -36,7 +36,7 @@ namespace DevAuth.AspNet
         {
             UriBuilder uriBuilder = new UriBuilder(AuthorizationEndpoint);
             uriBuilder.AppendQueryArgument("client_id", _clientID);
-            uriBuilder.AppendQueryArgument("redirect_uri", returnUrl.AbsoluteUri.Replace("localhost", "127.0.0.1"));
+            uriBuilder.AppendQueryArgument("redirect_uri", returnUrl.AbsoluteUri);
             //uriBuilder.AppendQueryArgument("scope", "user");
 
             return uriBuilder.Uri;
@@ -50,7 +50,7 @@ namespace DevAuth.AspNet
 
             builder.AppendQueryArgument("access_token", accessToken);
 
-            var request = new RestRequest(builder.Uri, Method.GET);
+            var request = new RestRequest(builder.Uri.AbsoluteUri, Method.GET);
 
             var response = client.Execute(request);
 
@@ -63,7 +63,14 @@ namespace DevAuth.AspNet
 
             strs["id"] = json["id"].ToString();
             strs["username"] = json["login"].ToString();
-            strs["name"] = json["name"].ToString();
+
+            try
+            {
+                strs["name"] = json["name"].ToString();
+            }
+            catch
+            {
+            }
 
             return strs;
         }
