@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("DevAuth.AspNet")]
-[assembly: AssemblyDescription("OAuth Providers for ASP.NET and DotNetOpenAuth")]
+[assembly: AssemblyTitle("DevAuth.AspNet.Tests")]
+[assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Paul Irwin")]
-[assembly: AssemblyProduct("DevAuth.AspNet")]
-[assembly: AssemblyCopyright("Copyright © 2013, Paul Irwin")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("DevAuth.AspNet.Tests")]
+[assembly: AssemblyCopyright("Copyright ©  2013")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("80a31007-3af6-46df-b884-0fae34e2bc4f")]
+[assembly: Guid("c7580683-c05d-45fe-bb4c-d46e703ea30d")]
 
 // Version information for an assembly consists of the following four values:
 //
@@ -34,5 +34,3 @@ using System.Runtime.InteropServices;
 // [assembly: AssemblyVersion("1.0.*")]
 [assembly: AssemblyVersion("1.0.0.0")]
 [assembly: AssemblyFileVersion("1.0.0.0")]
-
-[assembly: InternalsVisibleTo("DevAuth.AspNet.Tests")]

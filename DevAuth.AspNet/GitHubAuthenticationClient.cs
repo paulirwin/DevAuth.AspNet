@@ -32,7 +32,22 @@ namespace DevAuth.AspNet
             _clientSecret = clientSecret;
         }
 
+        public string ClientID
+        {
+            get { return _clientID; }
+        }
+
+        public string ClientSecret
+        {
+            get { return _clientSecret; }
+        }
+
         protected override Uri GetServiceLoginUrl(Uri returnUrl)
+        {
+            return GetServiceLoginUrlInternal(returnUrl);
+        }
+
+        internal Uri GetServiceLoginUrlInternal(Uri returnUrl)
         {
             UriBuilder uriBuilder = new UriBuilder(AuthorizationEndpoint);
             uriBuilder.AppendQueryArgument("client_id", _clientID);

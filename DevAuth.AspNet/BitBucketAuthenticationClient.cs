@@ -47,7 +47,22 @@ namespace DevAuth.AspNet
             _consumerSecret = consumerSecret;
         }
 
+        public string ConsumerKey
+        {
+            get { return _consumerKey; }
+        }
+
+        public string ConsumerSecret
+        {
+            get { return _consumerSecret; }
+        }
+
         protected override AuthenticationResult VerifyAuthenticationCore(AuthorizedTokenResponse response)
+        {
+            return VerifyAuthenticationInternal(response);
+        }
+
+        internal AuthenticationResult VerifyAuthenticationInternal(AuthorizedTokenResponse response)
         {
             var msg = response as ITokenSecretContainingMessage;
 
