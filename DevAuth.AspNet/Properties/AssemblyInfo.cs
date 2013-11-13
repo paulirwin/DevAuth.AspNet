@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("DevAuth.AspNet")]
-[assembly: AssemblyDescription("OAuth Providers for ASP.NET and DotNetOpenAuth")]
+[assembly: AssemblyDescription("BitBucket and GitHub OAuth Providers for ASP.NET and DotNetOpenAuth")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Paul Irwin")]
 [assembly: AssemblyProduct("DevAuth.AspNet")]

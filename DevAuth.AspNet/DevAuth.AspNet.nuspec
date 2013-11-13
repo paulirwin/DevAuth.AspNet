@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>DevAuth.AspNet</id>
+    <version>$version$</version>
+    <title>$title$</title>
+    <authors>$author$</authors>
+    <owners>$author$</owners>
+    <licenseUrl>https://github.com/paulirwin/DevAuth.AspNet/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/paulirwin/DevAuth.AspNet</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>$description$</description>
+    <releaseNotes>Initial release.</releaseNotes>
+    <copyright>Copyright 2013</copyright>
+    <tags>oauth asp.net bitbucket github dotnetopenauth mvc</tags>
+    <dependencies>
+      <dependency id="Newtonsoft.Json" version="5.0.8" />
+      <dependency id="RestSharp" version="104.3.3" />
+      <dependency id="DotNetOpenAuth.AspNet" version="4.3.3.13295" />
+    </dependencies>
+  </metadata>
+</package>
